@@ -3,6 +3,7 @@ package com.kgm.board;
 import java.util.Scanner;
 
 public class App {
+
   public void run() {
     Scanner sc = Container.sc;
 
@@ -33,6 +34,12 @@ public class App {
       }
       else if(rq.getUrlPath().equals("/usr/article/delete")) {
         Container.usrArticleController.actionDelete(rq);
+      }
+      else if(rq.getUrlPath().equals("/usr/member/join")) {
+        Container.usrMemberController.actionJoin();
+      }
+      else if(rq.getUrlPath().equals("/usr/member/login")) {
+        Container.usrMemberController.actionLogIn(rq);
       }
     }
     sc.close();

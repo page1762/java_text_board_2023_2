@@ -52,6 +52,10 @@ public class UsrArticleController {
       }
     }
 
+    if(foundArticle == null){
+      System.out.printf("%d번 게시물은 존재하지 않습니다.");
+    }
+
     articles.remove(foundArticle);
 
     System.out.printf("%d번 게시물을 삭제하였습니다.\n", foundArticle.id);
